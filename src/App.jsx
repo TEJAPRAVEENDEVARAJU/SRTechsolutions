@@ -6,7 +6,7 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import ScrollToTop from "./components/ScrollToTop";
 import AboutPage from "./pages/AboutPage";
-import EnquiryPage from "./Pages/EnquiryPage";
+import EnquiryPage from "./pages/EnquiryPage";
 import Expertise from "./components/Expertise";
 import CollegePartnerships from "./components/CollegePartnerships";
 import ProgramsPage from "./components/ProgramsPage";
