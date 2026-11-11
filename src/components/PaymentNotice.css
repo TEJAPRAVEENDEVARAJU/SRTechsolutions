@@ -1,0 +1,76 @@
+.payment-notice {
+  padding: 35px 6%;
+  background: #fff8f0;
+}
+
+.payment-notice-container {
+  max-width: 1250px;
+  margin: auto;
+  padding: 25px 30px;
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #f2c58d;
+  border-left: 5px solid #e58a24;
+  border-radius: 10px;
+  background: #ffffff;
+}
+
+.payment-notice-icon {
+  color: #d97706;
+  flex-shrink: 0;
+}
+
+.payment-notice-content {
+  position: relative;
+  z-index: 1;
+}
+
+.payment-notice-content h3 {
+  margin: 0 0 12px;
+  color: #17243b;
+  font-size: 19px;
+}
+
+.payment-notice-content p {
+  margin: 0 0 10px;
+  color: #536174;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.payment-notice-content strong {
+  display: block;
+  margin-top: 12px;
+  color: #b45309;
+  font-size: 14px;
+}
+
+.payment-notice-watermark {
+  position: absolute;
+  right: 25px;
+  bottom: 15px;
+  color: rgba(217, 119, 6, 0.07);
+}
+
+@media (max-width: 600px) {
+  .payment-notice {
+    padding: 25px 5%;
+  }
+
+  .payment-notice-container {
+    padding: 20px;
+    gap: 12px;
+  }
+
+  .payment-notice-content h3 {
+    font-size: 17px;
+  }
+
+  .payment-notice-content p,
+  .payment-notice-content strong {
+    font-size: 13px;
+  }
+}

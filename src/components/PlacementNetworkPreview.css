@@ -1,0 +1,119 @@
+.network-preview {
+  padding: 75px 6%;
+  background: #f3f4f6;
+}
+
+.network-preview-container {
+  max-width: 1250px;
+  margin: auto;
+  padding: 55px 65px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  position: relative;
+  overflow: hidden;
+  background: #17243b;
+  border-radius: 20px;
+  color: #ffffff;
+}
+
+.network-preview-icon {
+  width: 65px;
+  height: 65px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  background: #3978e8;
+  border-radius: 15px;
+}
+
+.network-preview-content {
+  max-width: 650px;
+  position: relative;
+  z-index: 2;
+}
+
+.network-preview-tag {
+  color: #8db4ff;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.network-preview-content h2 {
+  margin: 12px 0;
+  font-size: 34px;
+  font-weight: 700;
+}
+
+.network-preview-content h2 span {
+  color: #5792ff;
+}
+
+.network-preview-content p {
+  max-width: 600px;
+  margin-bottom: 25px;
+  color: #c5cede;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.network-preview-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 22px;
+  color: #ffffff;
+  background: #3978e8;
+  border-radius: 7px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.network-preview-btn:hover {
+  background: #5792ff;
+  transform: translateY(-3px);
+}
+
+.network-preview-decoration {
+  position: absolute;
+  right: 65px;
+  color: rgba(255, 255, 255, 0.07);
+  transform: rotate(-12deg);
+}
+
+@media (max-width: 768px) {
+  .network-preview {
+    padding: 55px 5%;
+  }
+
+  .network-preview-container {
+    padding: 35px 25px;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .network-preview-content h2 {
+    font-size: 28px;
+  }
+
+  .network-preview-decoration {
+    right: 15px;
+    bottom: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .network-preview-content h2 {
+    font-size: 25px;
+  }
+
+  .network-preview-content p {
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,67 @@
+
+.payment-marquee {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+  background: #fff3e6;
+  border-top: 1px solid #f2c58d;
+  border-bottom: 1px solid #f2c58d;
+  padding: 9px 0;
+}
+
+.payment-marquee-track {
+  display: flex;
+  width: max-content;
+  animation: payment-marquee-scroll 35s linear infinite;
+}
+
+.payment-marquee-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-right: 65px;
+  white-space: nowrap;
+  color: #a34d00;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+}
+
+.payment-marquee-item svg {
+  flex-shrink: 0;
+  color: #d97706;
+}
+
+.payment-marquee:hover .payment-marquee-track {
+  animation-play-state: paused;
+}
+
+@keyframes payment-marquee-scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 600px) {
+  .payment-marquee {
+    padding: 9px 0;
+  }
+
+  .payment-marquee-item {
+    font-size: 11px;
+    padding-right: 40px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .payment-marquee-track {
+    animation: none;
+  }
+}

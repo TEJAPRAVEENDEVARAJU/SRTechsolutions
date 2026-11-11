@@ -1,0 +1,455 @@
+
+.expertise-section {
+  position: relative;
+  padding: 110px 6%;
+  background: #f3f6fc;
+  overflow: hidden;
+}
+
+.expertise-container {
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+.expertise-heading {
+  max-width: 720px;
+  margin: 0 auto 60px;
+  text-align: center;
+}
+
+.expertise-eyebrow {
+  display: inline-block;
+  margin-bottom: 17px;
+  color: #1746a2;
+  font-size: 20px;
+  font-weight: 900;
+  letter-spacing: 2.2px;
+}
+
+.expertise-heading h2 {
+  margin: 0;
+  color: #17243b;
+  font-size: clamp(34px, 4vw, 49px);
+  font-weight: 750;
+  line-height: 1.2;
+  letter-spacing: -1.7px;
+}
+
+.expertise-heading h2 span {
+  color: #1746a2;
+}
+
+.expertise-heading p {
+  max-width: 650px;
+  margin: 19px auto 0;
+  color: #63718a;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.expertise-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 27px;
+  align-items: stretch;
+}
+
+.expertise-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  overflow: hidden;
+  background: #ffffff;
+  border: 1px solid #e6ebf4;
+  border-radius: 17px;
+  box-shadow: 0 10px 35px rgba(23, 36, 59, 0.045);
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+}
+
+.expertise-card:hover {
+  transform: translateY(-8px);
+  border-color: #c8d8f5;
+  box-shadow: 0 22px 50px rgba(23, 70, 162, 0.12);
+}
+
+.expertise-image {
+  position: relative;
+  height: 220px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #dce8fc, #f3f6fc);
+}
+
+.expertise-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.expertise-card:hover .expertise-image img {
+  transform: scale(1.06);
+}
+
+.expertise-number {
+  position: absolute;
+  top: 17px;
+  left: 17px;
+  display: grid;
+  place-items: center;
+  width: 43px;
+  height: 34px;
+  color: #ffffff;
+  background: rgba(16, 39, 82, 0.78);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 7px;
+  font-size: 12px;
+  font-weight: 700;
+  backdrop-filter: blur(8px);
+}
+
+.expertise-icon {
+  position: absolute;
+  right: 19px;
+  bottom: -22px;
+  display: grid;
+  place-items: center;
+  width: 53px;
+  height: 53px;
+  color: #ffffff;
+  background: #1746a2;
+  border: 4px solid #ffffff;
+  border-radius: 13px;
+}
+
+.expertise-content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 31px 25px 25px;
+}
+
+.expertise-category {
+  margin-bottom: 12px;
+  color: #3978e8;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+  line-height: 1.6;
+}
+
+.expertise-content h3 {
+  margin: 0 0 13px;
+  color: #17243b;
+  font-size: 21px;
+  font-weight: 750;
+  line-height: 1.35;
+}
+
+.expertise-content p {
+  margin: 0;
+  color: #63718a;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.expertise-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 21px;
+}
+
+.expertise-tags span {
+  padding: 7px 10px;
+  color: #36527d;
+  background: #f0f4fb;
+  border: 1px solid #e4ebf6;
+  border-radius: 5px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.expertise-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: auto;
+  padding-top: 24px;
+  color: #1746a2;
+  font-size: 14px;
+  font-weight: 750;
+  text-decoration: none;
+  transition: gap 0.25s ease;
+}
+
+.expertise-link:hover {
+  gap: 13px;
+}
+
+.expertise-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px 25px;
+  margin-top: 55px;
+  padding: 28px;
+  background: #ffffff;
+  border: 1px solid #e6ebf4;
+  border-radius: 13px;
+}
+
+.expertise-bottom p {
+  margin: 0;
+  color: #17243b;
+  font-size: 15px;
+  font-weight: 650;
+}
+
+.expertise-bottom a {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: #1746a2;
+  font-size: 14px;
+  font-weight: 750;
+  text-decoration: none;
+}
+
+.expertise-bottom a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 1050px) {
+  .expertise-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 650px) {
+  .expertise-section {
+    padding: 75px 5%;
+  }
+
+  .expertise-heading {
+    margin-bottom: 38px;
+  }
+
+  .expertise-heading h2 {
+    letter-spacing: -1px;
+  }
+
+  .expertise-heading p {
+    font-size: 14px;
+  }
+
+  .expertise-grid {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .expertise-image {
+    height: 215px;
+  }
+
+  .expertise-content {
+    padding: 29px 21px 22px;
+  }
+
+  .expertise-bottom {
+    flex-direction: column;
+    text-align: center;
+    padding: 24px 18px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .expertise-card,
+  .expertise-image img,
+  .expertise-link {
+    transition: none;
+  }
+
+  .expertise-card:hover {
+    transform: none;
+  }
+}
+
+
+/* =========================================
+   EXPERTISE SECTION - ENTRANCE ANIMATIONS
+========================================= */
+
+/* Section heading initial state */
+.expertise-heading {
+  opacity: 0;
+  transform: translateY(35px);
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+}
+
+/* Heading entrance */
+.expertise-visible .expertise-heading {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Expertise cards initial state */
+.expertise-card {
+  opacity: 0;
+  transform: translateY(45px) scale(0.96);
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+}
+
+/* Cards become visible */
+.expertise-visible .expertise-card {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* Staggered card animation */
+.expertise-visible .expertise-card:nth-child(1) {
+  transition-delay: 0.1s;
+}
+
+.expertise-visible .expertise-card:nth-child(2) {
+  transition-delay: 0.25s;
+}
+
+.expertise-visible .expertise-card:nth-child(3) {
+  transition-delay: 0.4s;
+}
+
+.expertise-visible .expertise-card:nth-child(4) {
+  transition-delay: 0.55s;
+}
+
+.expertise-visible .expertise-card:nth-child(5) {
+  transition-delay: 0.7s;
+}
+
+/* Image subtle zoom */
+.expertise-image img {
+  transform: scale(1.04);
+  transition: transform 0.8s ease;
+}
+
+.expertise-visible .expertise-image img {
+  transform: scale(1);
+}
+
+.expertise-card:hover .expertise-image img {
+  transform: scale(1.07);
+}
+
+/* Card hover effect */
+.expertise-card:hover {
+  transform: translateY(-8px);
+}
+
+/* Bottom enquiry banner initial state */
+.expertise-bottom {
+  opacity: 0;
+  transform: translateY(30px);
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+}
+
+/* Bottom banner entrance */
+.expertise-visible .expertise-bottom {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.85s;
+}
+
+/* =========================================
+   REDUCED MOTION ACCESSIBILITY
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .expertise-heading,
+  .expertise-card,
+  .expertise-image img,
+  .expertise-bottom {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .expertise-card:hover {
+    transform: none;
+  }
+}
+
+
+
+/* =================================
+   MOBILE ENQUIRY LAYOUT
+================================= */
+
+@media (max-width: 768px) {
+  .enquiry-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .enquiry-form-card {
+    order: 1;
+    width: 100%;
+  }
+
+  .enquiry-info {
+    order: 2;
+    width: 100%;
+  }
+
+  .enquiry-form {
+    width: 100%;
+  }
+}
+
+
+/* =========================================
+   MOBILE FIX - EXPERTISE HEADING VISIBILITY
+========================================= */
+
+@media (max-width: 768px) {
+  .expertise-section {
+    position: relative;
+    padding-top: 45px;
+    overflow: visible;
+  }
+
+  .expertise-container {
+    position: relative;
+    z-index: 2;
+  }
+
+  .expertise-heading {
+    position: relative;
+    z-index: 3;
+    display: block;
+    margin-top: 0;
+    padding-top: 15px;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .expertise-eyebrow {
+    display: inline-block;
+    position: relative;
+    z-index: 4;
+  }
+}

@@ -1,0 +1,998 @@
+
+/* =========================================
+   PLACEMENT NETWORK - ENTRANCE ANIMATIONS
+========================================= */
+
+/* Initial hidden state */
+.placement-network .placement-heading,
+.placement-network .placement-companies-heading {
+  opacity: 0;
+  transform: translateY(35px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* Heading visible */
+.placement-network.is-visible .placement-heading,
+.placement-network.is-visible .placement-companies-heading {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Statistics stagger animation */
+.placement-stat-card {
+  opacity: 0;
+  transform: translateY(35px) scale(0.96);
+  transition:
+    opacity 0.65s ease,
+    transform 0.65s ease,
+    box-shadow 0.3s ease;
+}
+
+.placement-network.is-visible .placement-stat-card {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.placement-network.is-visible .placement-stat-card:nth-child(1) {
+  transition-delay: 0.1s;
+}
+
+.placement-network.is-visible .placement-stat-card:nth-child(2) {
+  transition-delay: 0.25s;
+}
+
+.placement-network.is-visible .placement-stat-card:nth-child(3) {
+  transition-delay: 0.4s;
+}
+
+.placement-network.is-visible .placement-stat-card:nth-child(4) {
+  transition-delay: 0.55s;
+}
+
+/* Map entrance */
+.placement-map-section {
+  opacity: 0;
+  transform: translateY(45px);
+  transition: opacity 0.9s ease, transform 0.9s ease;
+}
+
+.placement-network.is-visible .placement-map-section {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.2s;
+}
+
+/* Location items */
+.placement-network.is-visible .placement-location-item:nth-child(2) {
+  transition-delay: 0.1s;
+}
+
+.placement-network.is-visible .placement-location-item:nth-child(3) {
+  transition-delay: 0.2s;
+}
+
+.placement-network.is-visible .placement-location-item:nth-child(4) {
+  transition-delay: 0.3s;
+}
+
+.placement-network.is-visible .placement-location-item:nth-child(5) {
+  transition-delay: 0.4s;
+}
+
+.placement-network.is-visible .placement-location-item:nth-child(6) {
+  transition-delay: 0.5s;
+}
+
+.placement-network.is-visible .placement-location-item:nth-child(7) {
+  transition-delay: 0.6s;
+
+}
+.placement-network.is-visible .placement-location-item:nth-child(8) {
+  transition-delay: 0.7s;
+}
+
+/* Company logos stagger animation */
+.placement-company-item {
+  opacity: 0;
+  transform: translateY(30px) scale(0.95);
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
+}
+
+.placement-network.is-visible .placement-company-item {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.placement-network.is-visible .placement-company-item:nth-child(4n + 1) {
+  transition-delay: 0.1s;
+}
+
+.placement-network.is-visible .placement-company-item:nth-child(4n + 2) {
+  transition-delay: 0.2s;
+}
+
+.placement-network.is-visible .placement-company-item:nth-child(4n + 3) {
+  transition-delay: 0.3s;
+}
+
+.placement-network.is-visible .placement-company-item:nth-child(4n + 4) {
+  transition-delay: 0.4s;
+}
+
+/* Reduced motion accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .placement-network .placement-heading,
+  .placement-network .placement-companies-heading,
+  .placement-stat-card,
+  .placement-map-section,
+  .placement-location-item,
+  .placement-company-item {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* Main section */
+
+.placement-network {
+  padding: 100px 6%;
+  background: #f5f8fd;
+  overflow: hidden;
+}
+
+.placement-container {
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+/* Section headings */
+
+.placement-heading,
+.placement-companies-heading {
+  max-width: 720px;
+  margin: 0 auto 48px;
+  text-align: center;
+}
+
+.placement-eyebrow,
+.placement-small-label {
+  display: inline-block;
+  color: #3978e8;
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin-bottom: 14px;
+}
+
+.placement-heading h2 {
+  color: #17243b;
+  font-size: clamp(32px, 4vw, 48px);
+  line-height: 1.2;
+  margin: 0 0 18px;
+  font-weight: 800;
+}
+
+.placement-heading h2 span {
+  color: #1746a2;
+}
+
+.placement-heading > p,
+.placement-companies-heading p {
+  color: #63718a;
+  font-size: 16px;
+  line-height: 1.8;
+  margin: 0;
+}
+
+/* Statistics */
+
+.placement-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-bottom: 90px;
+}
+
+.placement-stat-card {
+  padding: 28px 22px;
+  background: #ffffff;
+  border: 1px solid #e5ebf5;
+  border-radius: 18px;
+  box-shadow: 0 8px 30px rgba(23, 70, 162, 0.045);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.placement-stat-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 35px rgba(23, 70, 162, 0.1);
+}
+
+.placement-stat-icon {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  color: #1746a2;
+  background: #edf3ff;
+  border-radius: 12px;
+  margin-bottom: 18px;
+}
+
+.placement-stat-number {
+  color: #1746a2;
+  font-size: clamp(30px, 3vw, 40px);
+  font-weight: 800;
+  letter-spacing: -1.5px;
+  line-height: 1.2;
+}
+
+.placement-stat-card p {
+  color: #63718a;
+  font-size: 14px;
+  font-weight: 600;
+  margin: 9px 0 0;
+}
+
+/* Placement map */
+
+.placement-map-section {
+  padding: 36px;
+  background: #ffffff;
+  border: 1px solid #e5ebf5;
+  border-radius: 24px;
+  box-shadow: 0 12px 40px rgba(23, 70, 162, 0.05);
+  margin-bottom: 90px;
+}
+
+.placement-map-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 28px;
+}
+
+.placement-map-heading h3,
+.placement-companies-heading h3 {
+  color: #17243b;
+  font-size: clamp(23px, 3vw, 30px);
+  margin: 0 0 10px;
+  font-weight: 750;
+}
+
+.placement-map-heading p {
+  color: #63718a;
+  line-height: 1.7;
+  margin: 0;
+  font-size: 14px;
+}
+
+.placement-map-tag {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #1746a2;
+  background: #edf3ff;
+  border-radius: 30px;
+  padding: 10px 16px;
+  font-size: 13px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.placement-map-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 235px;
+  gap: 26px;
+  align-items: stretch;
+}
+
+.placement-map {
+  height: 440px;
+  overflow: hidden;
+  border-radius: 16px;
+  background: #eaf0f8;
+}
+
+.india-map {
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.placement-location-list {
+  padding: 22px;
+  background: #f5f8fd;
+  border-radius: 16px;
+}
+
+.placement-location-list h4 {
+  color: #17243b;
+  font-size: 16px;
+  margin: 0 0 20px;
+}
+
+.placement-location-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px solid #e2e9f3;
+}
+
+.placement-location-item:last-child {
+  border-bottom: 0;
+}
+
+.placement-location-dot {
+  flex-shrink: 0;
+  width: 9px;
+  height: 9px;
+  margin-top: 5px;
+  background: #3978e8;
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px #dce8ff;
+}
+
+.placement-location-item strong,
+.placement-location-item small {
+  display: block;
+}
+
+.placement-location-item strong {
+  color: #17243b;
+  font-size: 13px;
+}
+
+.placement-location-item small {
+  color: #8490a4;
+  font-size: 11px;
+  margin-top: 4px;
+}
+
+/* Company showcase */
+
+.placement-companies-heading {
+  margin-bottom: 38px;
+}
+
+.placement-company-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 28px 18px;
+}
+
+.placement-company-item {
+  min-width: 0;
+  text-align: center;
+}
+
+/* White image card */
+
+.placement-company-card {
+  height: 175px;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  border: 1px solid #e9edf4;
+  border-radius: 18px;
+  overflow: hidden;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.placement-company-card:hover {
+  transform: translateY(-5px);
+  border-color: #d4e1f7;
+  box-shadow: 0 14px 35px rgba(23, 70, 162, 0.09);
+}
+
+/* Company logo image */
+
+.placement-company-card img {
+  display: block;
+  max-width: 100%;
+  max-height: 100px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Company name below image */
+
+.placement-company-name {
+  margin: 13px 0 0;
+  color: #17243b;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.5;
+  text-align: center;
+}
+
+/* More companies */
+
+.placement-more-companies {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 35px;
+  color: #1746a2;
+  font-size: 14px;
+  font-weight: 750;
+}
+
+/* Tablet */
+
+@media (max-width: 1000px) {
+  .placement-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .placement-map-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .placement-location-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0 20px;
+  }
+
+  .placement-location-list h4 {
+    grid-column: 1 / -1;
+  }
+
+  .placement-company-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .placement-company-card {
+    height: 155px;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+  .placement-network {
+    padding: 70px 5%;
+  }
+
+  .placement-heading {
+    margin-bottom: 32px;
+  }
+
+  .placement-heading > p {
+    font-size: 14px;
+  }
+
+  .placement-stats-grid {
+    gap: 12px;
+    margin-bottom: 60px;
+  }
+
+  .placement-stat-card {
+    padding: 20px 15px;
+    border-radius: 14px;
+  }
+
+  .placement-stat-number {
+    font-size: 29px;
+  }
+
+  .placement-stat-card p {
+    font-size: 12px;
+  }
+
+  .placement-map-section {
+    padding: 20px 14px;
+    margin-bottom: 65px;
+    border-radius: 18px;
+  }
+
+  .placement-map-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .placement-map {
+    height: 350px;
+  }
+
+  .placement-location-list {
+    grid-template-columns: 1fr 1fr;
+    padding: 16px;
+  }
+
+  .placement-company-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px 12px;
+  }
+
+  .placement-company-card {
+    height: 130px;
+    padding: 15px;
+    border-radius: 14px;
+  }
+
+  .placement-company-card img {
+    max-height: 75px;
+  }
+
+  .placement-company-name {
+    font-size: 12px;
+    margin-top: 10px;
+  }
+}
+
+/* Accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+  .placement-stat-card,
+  .placement-company-card {
+    transition: none;
+  }
+}
+
+
+/* =========================================
+   COMPANY SHOWCASE ANIMATIONS
+========================================= */
+
+/* Company heading */
+.placement-companies-heading {
+  opacity: 0;
+  transform: translateY(35px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.companies-visible .placement-companies-heading {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Company cards initial state */
+.placement-company-item {
+  opacity: 0;
+  transform: translateY(35px) scale(0.94);
+  transition:
+    opacity 0.65s ease,
+    transform 0.65s ease;
+}
+
+/* Cards appear */
+.companies-visible .placement-company-item {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* Staggered appearance */
+.companies-visible .placement-company-item:nth-child(4n + 1) {
+  transition-delay: 0.1s;
+}
+
+.companies-visible .placement-company-item:nth-child(4n + 2) {
+  transition-delay: 0.2s;
+}
+
+.companies-visible .placement-company-item:nth-child(4n + 3) {
+  transition-delay: 0.3s;
+}
+
+.companies-visible .placement-company-item:nth-child(4n + 4) {
+  transition-delay: 0.4s;
+}
+
+/* Logo zoom effect */
+.placement-company-card img {
+  transition: transform 0.45s ease;
+}
+
+.placement-company-card:hover img {
+  transform: scale(1.09);
+}
+
+/* More companies message */
+.placement-more-companies {
+  opacity: 0;
+  transform: translateY(15px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.companies-visible .placement-more-companies {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.7s;
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .placement-companies-heading,
+  .placement-company-item,
+  .placement-company-card img,
+  .placement-more-companies {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+
+/* =========================================
+   PLACEMENT NETWORK - ANIMATIONS
+========================================= */
+
+/* Main section heading */
+.placement-heading {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.placement-network.is-visible .placement-heading {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Statistics cards */
+.placement-stat-card {
+  opacity: 0;
+  transform: translateY(35px) scale(0.96);
+  transition:
+    opacity 0.65s ease,
+    transform 0.65s ease,
+    box-shadow 0.3s ease;
+}
+
+.placement-network.is-visible .placement-stat-card {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.placement-network.is-visible .placement-stat-card:nth-child(1) {
+  transition-delay: 0.1s;
+}
+
+.placement-network.is-visible .placement-stat-card:nth-child(2) {
+  transition-delay: 0.25s;
+}
+
+.placement-network.is-visible .placement-stat-card:nth-child(3) {
+  transition-delay: 0.4s;
+}
+
+.placement-network.is-visible .placement-stat-card:nth-child(4) {
+  transition-delay: 0.55s;
+}
+
+/* Map section */
+.placement-map-section {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.9s ease, transform 0.9s ease;
+}
+
+.placement-network.is-visible .placement-map-section {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.2s;
+}
+
+/* Placement locations */
+.placement-location-item {
+  opacity: 0;
+  transform: translateX(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.placement-network.is-visible .placement-location-item {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.placement-network.is-visible .placement-location-item:nth-child(2) {
+  transition-delay: 0.1s;
+}
+
+.placement-network.is-visible .placement-location-item:nth-child(3) {
+  transition-delay: 0.2s;
+}
+
+.placement-network.is-visible .placement-location-item:nth-child(4) {
+  transition-delay: 0.3s;
+}
+
+.placement-network.is-visible .placement-location-item:nth-child(5) {
+  transition-delay: 0.4s;
+}
+
+.placement-network.is-visible .placement-location-item:nth-child(6) {
+  transition-delay: 0.5s;
+}
+
+.placement-network.is-visible .placement-location-item:nth-child(7) {
+  transition-delay: 0.6s;
+}
+
+.placement-network.is-visible .placement-location-item:nth-child(8) {
+  transition-delay: 0.7s;
+}
+
+/* =========================================
+   COMPANY SHOWCASE - INDEPENDENT ANIMATION
+========================================= */
+
+/* Company heading */
+.placement-companies-heading {
+  opacity: 0;
+  transform: translateY(35px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.companies-visible .placement-companies-heading {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Company cards */
+.placement-company-item {
+  opacity: 0;
+  transform: translateY(35px) scale(0.94);
+  transition:
+    opacity 0.65s ease,
+    transform 0.65s ease;
+}
+
+.companies-visible .placement-company-item {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* Staggered four-column appearance */
+.companies-visible .placement-company-item:nth-child(4n + 1) {
+  transition-delay: 0.1s;
+}
+
+.companies-visible .placement-company-item:nth-child(4n + 2) {
+  transition-delay: 0.2s;
+}
+
+.companies-visible .placement-company-item:nth-child(4n + 3) {
+  transition-delay: 0.3s;
+}
+
+.companies-visible .placement-company-item:nth-child(4n + 4) {
+  transition-delay: 0.4s;
+}
+
+/* Company logo hover */
+.placement-company-card img {
+  transition: transform 0.45s ease;
+}
+
+.placement-company-card:hover img {
+  transform: scale(1.09);
+}
+
+/* More companies message */
+.placement-more-companies {
+  opacity: 0;
+  transform: translateY(15px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.companies-visible .placement-more-companies {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.7s;
+}
+
+/* =========================================
+   ACCESSIBILITY - REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .placement-heading,
+  .placement-stat-card,
+  .placement-map-section,
+  .placement-location-item,
+  .placement-companies-heading,
+  .placement-company-item,
+  .placement-company-card img,
+  .placement-more-companies {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* Map animation */
+.placement-map-section {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.9s ease, transform 0.9s ease;
+}
+
+.placement-network.is-visible .placement-map-section {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.2s;
+}
+
+/* Location list animation */
+.placement-location-item {
+  opacity: 0;
+  transform: translateX(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.placement-network.is-visible .placement-location-item {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.placement-network.is-visible .placement-location-item:nth-child(2) {
+  transition-delay: 0.1s;
+}
+
+.placement-network.is-visible .placement-location-item:nth-child(3) {
+  transition-delay: 0.2s;
+}
+
+.placement-network.is-visible .placement-location-item:nth-child(4) {
+  transition-delay: 0.3s;
+}
+
+.placement-network.is-visible .placement-location-item:nth-child(5) {
+  transition-delay: 0.4s;
+}
+
+.placement-network.is-visible .placement-location-item:nth-child(6) {
+  transition-delay: 0.5s;
+}
+
+.placement-network.is-visible .placement-location-item:nth-child(7) {
+  transition-delay: 0.6s;
+}
+
+.placement-network.is-visible .placement-location-item:nth-child(8) {
+  transition-delay: 0.7s;
+}
+
+/* =========================================
+   COMPANY SHOWCASE - SEPARATE ANIMATION
+========================================= */
+
+/* Company heading */
+.placement-companies-heading {
+  opacity: 0;
+  transform: translateY(35px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.companies-visible .placement-companies-heading {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Company cards */
+.placement-company-item {
+  opacity: 0;
+  transform: translateY(35px) scale(0.94);
+  transition:
+    opacity 0.65s ease,
+    transform 0.65s ease;
+}
+
+.companies-visible .placement-company-item {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* Staggered logo appearance */
+.companies-visible .placement-company-item:nth-child(4n + 1) {
+  transition-delay: 0.1s;
+}
+
+.companies-visible .placement-company-item:nth-child(4n + 2) {
+  transition-delay: 0.2s;
+}
+
+.companies-visible .placement-company-item:nth-child(4n + 3) {
+  transition-delay: 0.3s;
+}
+
+.companies-visible .placement-company-item:nth-child(4n + 4) {
+  transition-delay: 0.4s;
+}
+
+/* Logo hover zoom */
+.placement-company-card img {
+  transition: transform 0.45s ease;
+}
+
+.placement-company-card:hover img {
+  transform: scale(1.1);
+}
+
+/* More companies text */
+.placement-more-companies {
+  opacity: 0;
+  transform: translateY(15px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.companies-visible .placement-more-companies {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.7s;
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .placement-heading,
+  .placement-stat-card,
+  .placement-map-section,
+  .placement-location-item,
+  .placement-companies-heading,
+  .placement-company-item,
+  .placement-company-card img,
+  .placement-more-companies {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+
+/* =========================================
+   MOBILE FIX - ALWAYS SHOW PLACEMENT CONTENT
+========================================= */
+
+@media (max-width: 600px) {
+
+  .placement-network .placement-heading,
+  .placement-network .placement-companies-heading,
+  .placement-network .placement-stat-card,
+  .placement-network .placement-map-section,
+  .placement-network .placement-location-item,
+  .placement-network .placement-company-item,
+  .placement-network .placement-more-companies {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+    transition: none !important;
+    animation: none !important;
+  }
+
+  .placement-network .placement-company-card img {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+  }
+}
+
+
+
+/* =========================================
+   PLACEMENT NETWORK - INITIAL VISIBILITY FIX
+========================================= */
+
+.placement-network .placement-heading,
+.placement-network .placement-companies-heading,
+.placement-network .placement-stat-card,
+.placement-network .placement-map-section,
+.placement-network .placement-location-item,
+.placement-network .placement-company-item,
+.placement-network .placement-more-companies {
+  opacity: 1;
+  visibility: visible;
+}

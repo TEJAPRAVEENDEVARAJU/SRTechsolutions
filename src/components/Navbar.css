@@ -1,0 +1,449 @@
+
+/* =========================================
+   SR TECH SOLUTIONS - RESPONSIVE NAVBAR
+========================================= */
+
+
+.navbar {
+  position: relative;
+  top: auto;
+  left: auto;
+  width: 100%;
+  z-index: 1000;
+  isolation: isolate;
+
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border-bottom: 1px solid #e7edf6;
+}
+
+
+.nav-container {
+  width: 100%;
+  max-width: 1440px;
+  min-height: 86px;
+  margin: auto;
+  padding: 0 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+/* =========================================
+   BRAND
+========================================= */
+
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.brand-symbol {
+  width: 46px;
+  height: 46px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  color: #ffffff;
+  font-size: 22px;
+  font-weight: 800;
+  font-style: italic;
+  background: linear-gradient(135deg, #1746a2, #3978e8);
+  box-shadow: 0 5px 16px rgba(23, 70, 162, 0.2);
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+  color: #17243b;
+  letter-spacing: 1.3px;
+  font-weight: 800;
+  font-size: 16px;
+}
+
+.brand-text small {
+  color: #3978e8;
+  font-size: 10px;
+  letter-spacing: 3px;
+  margin-top: 4px;
+}
+
+/* =========================================
+   DESKTOP NAVIGATION
+========================================= */
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: clamp(10px, 1.3vw, 20px);
+}
+
+.nav-item {
+  position: relative;
+  z-index: 1100;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #34445e;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+  white-space: nowrap;
+  padding: 32px 0;
+  transition: color 0.25s ease;
+}
+
+.nav-link:hover {
+  color: #1746a2;
+}
+
+.nav-link svg {
+  transition: transform 0.25s ease;
+}
+
+.nav-item:hover .nav-link svg {
+  transform: rotate(180deg);
+}
+
+/* =========================================
+   DESKTOP DROPDOWN
+========================================= */
+
+.dropdown-menu {
+  position: absolute;
+  top: calc(100% - 8px);
+  left: -15px;
+  min-width: 235px;
+  padding: 9px;
+
+  z-index: 1200;
+
+  background: #ffffff;
+  border: 1px solid #e5ebf5;
+  border-radius: 12px;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(10px);
+
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease,
+    visibility 0.25s ease;
+
+  box-shadow: 0 15px 40px rgba(23, 45, 84, 0.12);
+}
+
+.nav-item:hover .dropdown-menu,
+.nav-item:focus-within .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.dropdown-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  padding: 12px;
+  color: #34445e;
+  text-decoration: none;
+  font-size: 15px;
+  border-radius: 7px;
+  transition: 0.25s ease;
+}
+
+.dropdown-link:hover {
+  color: #1746a2;
+  background: #edf3ff;
+}
+
+.dropdown-overview {
+  color: #1746a2;
+  font-weight: 750;
+  background: #f3f6fc;
+  margin-bottom: 5px;
+}
+
+.dropdown-overview:hover {
+  background: #e7efff;
+}
+
+/* =========================================
+   ENQUIRY BUTTON
+========================================= */
+
+.nav-cta,
+.mobile-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 13px 19px;
+  border-radius: 8px;
+  background: linear-gradient(110deg, #1746a2, #3978e8);
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 700;
+  white-space: nowrap;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.nav-cta:hover,
+.mobile-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(23, 70, 162, 0.22);
+}
+
+/* =========================================
+   MOBILE MENU BUTTON
+========================================= */
+
+.mobile-menu-btn {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border: none;
+  border-radius: 9px;
+  background: #edf3ff;
+  color: #1746a2;
+  cursor: pointer;
+  transition: background 0.25s ease, transform 0.2s ease;
+}
+
+.mobile-menu-btn:hover {
+  background: #dce9ff;
+}
+
+.mobile-menu-btn:active {
+  transform: scale(0.94);
+}
+
+/* =========================================
+   TABLET + MOBILE NAVIGATION
+========================================= */
+
+.mobile-nav {
+  display: none;
+}
+
+/* Switch before desktop menu gets crowded */
+
+@media (max-width: 1180px) {
+
+  .nav-links,
+  .nav-container > .nav-cta {
+    display: none;
+  }
+
+  .mobile-menu-btn {
+    display: flex;
+  }
+
+  .mobile-nav {
+    display: block;
+    width: 100%;
+    max-height: 0;
+    padding: 0 5%;
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    background: #ffffff;
+    border-top: 1px solid transparent;
+
+    transition:
+      max-height 0.4s ease,
+      opacity 0.3s ease,
+      padding 0.35s ease,
+      border-color 0.3s ease,
+      visibility 0.3s ease;
+  }
+
+  .mobile-nav.open {
+    max-height: 80vh;
+    padding: 12px 5% 25px;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    border-top-color: #e7edf6;
+  }
+
+  .mobile-nav-item {
+    border-bottom: 1px solid #edf0f5;
+  }
+
+  .mobile-nav-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    min-height: 50px;
+    padding: 13px 5px;
+    color: #34445e;
+    background: transparent;
+    border: none;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: left;
+    cursor: pointer;
+  }
+
+  .mobile-nav-link:hover {
+    color: #1746a2;
+  }
+
+  .mobile-nav-link svg {
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+  }
+
+  .mobile-nav-link svg.rotated {
+    transform: rotate(180deg);
+  }
+
+  /* Animated submenu */
+
+  .mobile-dropdown {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition:
+      max-height 0.35s ease,
+      opacity 0.25s ease;
+  }
+
+  .mobile-dropdown.show {
+    max-height: 300px;
+    opacity: 1;
+  }
+
+  .mobile-dropdown a {
+    display: block;
+    padding: 0 12px;
+    color: #71809a;
+    text-decoration: none;
+    font-size: 13px;
+    transition:
+      color 0.2s ease,
+      padding 0.3s ease;
+  }
+
+  .mobile-dropdown.show a {
+    padding: 11px 12px;
+  }
+
+  .mobile-dropdown a:hover {
+    color: #1746a2;
+  }
+
+  .mobile-cta {
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 18px;
+    min-height: 48px;
+  }
+}
+
+/* =========================================
+   SMALL TABLETS
+========================================= */
+
+@media (max-width: 768px) {
+  .nav-container {
+    min-height: 76px;
+  }
+}
+
+/* =========================================
+   MOBILE PHONES
+========================================= */
+
+@media (max-width: 600px) {
+  .nav-container {
+    min-height: 72px;
+    padding: 0 5%;
+  }
+
+  .brand-symbol {
+    width: 40px;
+    height: 40px;
+    font-size: 19px;
+    border-radius: 10px;
+  }
+
+  .brand-text {
+    font-size: 14px;
+  }
+
+  .brand-text small {
+    font-size: 9px;
+    letter-spacing: 2.5px;
+  }
+
+  .mobile-menu-btn {
+    width: 42px;
+    height: 42px;
+  }
+
+  .mobile-nav.open {
+    max-height: 75vh;
+  }
+}
+
+/* =========================================
+   EXTRA SMALL PHONES
+========================================= */
+
+@media (max-width: 360px) {
+  .nav-container {
+    padding: 0 4%;
+  }
+
+  .brand-symbol {
+    width: 36px;
+    height: 36px;
+    font-size: 17px;
+  }
+
+  .brand-text {
+    font-size: 12px;
+  }
+
+  .brand-text small {
+    font-size: 8px;
+  }
+}
+
+/* =========================================
+   ACCESSIBILITY
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .navbar *,
+  .mobile-nav,
+  .mobile-dropdown {
+    transition: none !important;
+    animation: none !important;
+  }
+}

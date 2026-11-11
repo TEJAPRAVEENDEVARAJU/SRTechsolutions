@@ -1,0 +1,15 @@
+.navbar-spacer {
+  height: 86px;
+}
+
+@media (max-width: 768px) {
+  .navbar-spacer {
+    height: 76px;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar-spacer {
+    height: 72px;
+  }
+}
